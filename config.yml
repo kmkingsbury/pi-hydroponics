@@ -1,0 +1,9 @@
+postgres:
+    host: localhost
+    user: root
+    password: my secret password
+    dbname: write-math
+mqtt:
+    enabled: true
+    host: localhost
+    topic: "home/hydroponics"
