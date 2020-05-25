@@ -1,0 +1,3 @@
+check process climate_sensors with pidfile /tmp/climate_sensors.pid
+   start = "/bin/su - pi -c 'cd /home/pi/code/pi-hydroponics; source /home/pi/code/pi-hydroponics/spaceman/bin/activate;  /home/pi/code/pi-hydroponics/spaceman/bin/python3 climate_sensors.py  >> /tmp/climate_sensors.log 2>&1 &'"
+   stop = "/usr/bin/killall python3"
