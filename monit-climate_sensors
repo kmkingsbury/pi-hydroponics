@@ -1,3 +1,6 @@
 check process climate_sensors with pidfile /tmp/climate_sensors.pid
    start = "/bin/su - pi -c 'cd /home/pi/code/pi-hydroponics; source /home/pi/code/pi-hydroponics/spaceman/bin/activate;  /home/pi/code/pi-hydroponics/spaceman/bin/python3 climate_sensors.py  >> /tmp/climate_sensors.log 2>&1 &'"
    stop = "/usr/bin/killall python3"
+check process writeinfluxdb with pidfile /tmp/writeinfluxdb.pid
+   start = "/bin/su - pi -c 'cd /home/pi/code/pi-hydroponics/; source /home/pi/code/pi-hydroponics/spaceman/bin/activate; /home/pi/code/pi-hydroponics/spaceman/bin/python3 writeinfluxdb.py  >> /tmp/writeinfluxdb.log 2>&1 &'"
+   stop = "/usr/bin/killall python3"
