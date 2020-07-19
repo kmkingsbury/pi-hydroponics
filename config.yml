@@ -7,3 +7,15 @@ mqtt:
     enabled: true
     host: localhost
     topic: "home/hydroponics"
+climate:
+    28-01192fa8486b: water
+    28-01192fa68a8e: soil
+    28-01192fa7250a: air
+    dht: pond air
+    humidity: humidity
+influxdb:
+    host: localhost
+    user: writeuser
+    password: my secret password
+    dbname: weatherstation
+    port: 8086
