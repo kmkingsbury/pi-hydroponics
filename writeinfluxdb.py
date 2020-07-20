@@ -31,7 +31,7 @@ def on_message(client, userdata, msg):  # The callback for when a PUBLISH messag
     prefix = "temperature_"
     sensorId = ''
     for key in data.keys():
-        #print("key:" + key )
+        # print("key:" + key )
         if key.startswith(prefix):
             measurement = 'temperature'
             #print("temp")
@@ -49,6 +49,9 @@ def on_message(client, userdata, msg):  # The callback for when a PUBLISH messag
             tag = "humidity"
             field = data[key]
             sensorId = 'dht11'
+        else:
+            # key = datetime
+            continue
         print ("tag:" + tag + " " + "field:" + field)
         json_body = [{
             "measurement": measurement,
